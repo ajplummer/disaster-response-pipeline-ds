@@ -12,3 +12,27 @@
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+## File Descriptions
+- app
+| - template
+| |- master.html - main page of web app
+| |- go.html - classification result page of web app
+|- run.py - Flask file that runs app
+
+- data
+|- disaster_categories.csv - data to process 
+|- disaster_messages.csv - data to process
+|- process_data.py - Code for processing the two data files above, cleaning up the data and storing it in a database.
+
+- models
+|- train_classifier.py - Code for training the model based upon the data processed in the prior step.
+
+- README.md - This file.
+
+## Licensing, Authors, Acknowledgements, Etc.
+The data was and file structure was provided by Udacity as part of their Data Science for Professionals Nanodegree.
+
+The code was written by me, A.J. Plummer, with some functions copied (either word-for-word or in spirit) from Udacity coursework. Those functions are noted in the comments in the code.
+
+Thank you to Udacity for putting together a great "real world" exercise for us and to my company, Mars, Inc., for enabling me to take on this course!
