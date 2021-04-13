@@ -6,6 +6,18 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
+    """
+    Function load_data takes in two filepaths and reads the data from them into dataframes
+
+    Parameters:
+    messages_filepath: Filepath of the Messages file
+    categories_filepath: Filepath of the Categories file
+
+    Returns:
+    df: The merged dataframe of messages and categories
+    categories: The original categories dataframe
+
+    """
     # load messages dataset
     messages = pd.read_csv(messages_filepath)
 
@@ -20,6 +32,16 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def upd_cat_vals(cat):
+    """
+    Function upd_cat_vals takes in a category value string and returns just the integer
+
+    Parameters:
+    cat: A category value
+
+    Returns:
+    val: The integer value found in the category string
+
+    """
     # set each value to be the last character of the string
     val = cat[cat.index('-')+1:]
 
@@ -29,6 +51,17 @@ def upd_cat_vals(cat):
 
 
 def clean_data(df, categories):
+    """
+    Function clean_data takes in two dataframes and cleans up the data in the primary one
+
+    Parameters:
+    df: The primary, merged dataframe to be used in this program
+    categories: The original categories dataframe
+
+    Returns:
+    df: The merged dataframe of messages and categories after it has been cleaned
+
+    """
     # create a dataframe of the 36 individual category columns
     old_categories = categories
     categories = df['categories'].str.split(';', expand=True)
@@ -63,6 +96,18 @@ def clean_data(df, categories):
 
 
 def save_data(df, database_filename):
+    """
+    Function save_data takes in the primary dataframe and the desired filename for the output database and
+    then saves the dataframe to the database.
+
+    Parameters:
+    df: The primary dataframe
+    database_filename: Desired filename of the output database
+
+    Returns:
+    N/A
+
+    """
     engine = create_engine('sqlite:///' + database_filename)
     df.to_sql('Messages', engine, index=False, if_exists='replace')
 
