@@ -15,18 +15,18 @@
 
 ## File Descriptions
 - app
-| - template
-| |- master.html - main page of web app
-| |- go.html - classification result page of web app
-|- run.py - Flask file that runs app
+   - template
+     - master.html - main page of web app
+     - go.html - classification result page of web app
+   - run.py - Flask file that runs app
 
 - data
-|- disaster_categories.csv - data to process 
-|- disaster_messages.csv - data to process
-|- process_data.py - Code for processing the two data files above, cleaning up the data and storing it in a database.
+   - disaster_categories.csv - data to process 
+   - disaster_messages.csv - data to process
+   - process_data.py - Code for processing the two data files above, cleaning up the data and storing it in a database.
 
 - models
-|- train_classifier.py - Code for training the model based upon the data processed in the prior step.
+   - train_classifier.py - Code for training the model based upon the data processed in the prior step.
 
 - README.md - This file.
 
