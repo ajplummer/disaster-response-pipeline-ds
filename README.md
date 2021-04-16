@@ -1,6 +1,6 @@
 # Disaster Response Pipeline Project
 
-### Instructions:
+## Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
@@ -12,6 +12,26 @@
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+## Installation
+The main content of this repository are Python files as well as a web application utilizing Flask and Python as the backend.
+
+To run this project you will need:
+- Python 3.0
+- Numpy
+- Pandas
+- SQLAlchemy
+- NLTK
+- Pickle
+- Plotly
+- Flask
+- Sklearn
+- A Web Browser
+
+## Project Motivations
+This is a required project for the Udacity Data Scientist for Enterprise nanodegree but is also one I am interested in personally.
+
+This seems to be a great real-world example of where data science can provide benefit to humanity. In a disaster, there will be many messages received or trending on social media and it is important that responders can sift through the all of the data to find the more urgent or important ones to focus on. Data science can automate that process to save time and allow the responders to focus on what they do best: helping people.
 
 ## File Descriptions
 - app
