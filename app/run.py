@@ -45,6 +45,13 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+
+    # Find the top 10 categories with the highest % of messages and display [Copied from https://github.com/harshdarji23/Disaster-Response-WebApplication]
+    top_cats_df = df.drop(['id', 'message', 'original', 'genre'], axis = 1).sum()/len(df)#.sort_values(ascending = False)[:,0:10]
+    top_cats_df=(top_cats_df.sort_values(ascending=False)[0:10])
+    top_cats_names = list(top_cats_df.index)
+    top_cats_proportions = top_cats_df[0]
+
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -63,6 +70,25 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+        # [Copied from https://github.com/harshdarji23/Disaster-Response-WebApplication]
+        {
+            'data': [
+                Bar(
+                    x = top_cats_names,
+                    y = top_cats_proportions
+                )
+            ],
+
+            'layout': {
+                'title': 'Top 10 Categories by Proportion of Messages Received',
+                'yaxis': {
+                    'title': "Proportions"
+                },
+                'xaxis': {
+                    'title': "Message Types"
                 }
             }
         }
