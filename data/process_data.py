@@ -92,6 +92,9 @@ def clean_data(df, categories):
     # drop duplicates
     df = df.drop_duplicates()
 
+    # Remove rows with a related value of 2 from the dataset [Copied from https://github.com/harshdarji23/Disaster-Response-WebApplication]
+    df = df[df['related'] != 2]
+
     return df
 
 
