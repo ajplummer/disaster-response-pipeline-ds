@@ -53,6 +53,6 @@ This seems to be a great real-world example of where data science can provide be
 ## Licensing, Authors, Acknowledgements, Etc.
 The data was and file structure was provided by Udacity as part of their Data Science for Professionals Nanodegree.
 
-The code was written by me, A.J. Plummer, with some functions copied (either word-for-word or in spirit) from Udacity coursework. Those functions are noted in the comments in the code.
+The code was written by me, A.J. Plummer, with some functions copied (either word-for-word or in spirit) from Udacity coursework. Those functions are noted in the comments in the code. Additionally, one of the Flask graphs was copied directly from https://github.com/harshdarji23/Disaster-Response-WebApplication and all rights go to harshdarji23 for the work.
 
 Thank you to Udacity for putting together a great "real world" exercise for us and to my company, Mars, Inc., for enabling me to take on this course!
